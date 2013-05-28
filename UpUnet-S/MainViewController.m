@@ -6,6 +6,14 @@
 //  Copyright (c) 2013 Christopher Loessl. All rights reserved.
 //
 
+// TODO: Save username + password in keychain
+// TODO: Add AFNetworking
+// TODO: Post -> Connect
+// TODO: Post -> Disconnect
+// TODO: Save auto connect setting in NSUserDefaults
+// TODO: Find out if we have connection to the internet via wifi
+#pragma mark -
+
 #import "MainViewController.h"
 
 @interface MainViewController ()
@@ -14,29 +22,10 @@
 
 @implementation MainViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"viewDidLoad");
+- (IBAction)disconnectButton {
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    NSLog(@"viewDidAppear");
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)disconnectButton:(UIButton *)sender {
-}
-
-- (IBAction)connectButton:(UIButton *)sender {
+- (IBAction)connectButton {
 }
 
 @end

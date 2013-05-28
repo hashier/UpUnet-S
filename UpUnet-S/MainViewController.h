@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
-
+- (IBAction)connectButton;
 @end
