@@ -15,7 +15,6 @@
 #import "AFHTTPClient.h"
 
 @interface MainViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *connectButton;
 @property (weak, nonatomic) IBOutlet UIButton *disconnectButton;
 @end
 
@@ -39,7 +38,7 @@ static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
     } else {
         NSLog(@"Error!");
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                     message:@"Can't dicede which button"
+                                                     message:@"Can't decide which button"
                                                     delegate:nil
                                            cancelButtonTitle:@"Ok"
                                            otherButtonTitles:nil];

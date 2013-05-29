@@ -32,9 +32,11 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+
     // TODO: Check settings
+    // Press the "connect" button
 //    MainViewController *mainController = (MainViewController*) self.window.rootViewController;
-//    [mainController connectButton];
+//    [mainController.connectButton sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

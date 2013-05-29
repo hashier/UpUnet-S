@@ -10,4 +10,5 @@
 
 @interface MainViewController : UIViewController
 - (IBAction)connectButton:(UIButton *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *connectButton;
 @end
