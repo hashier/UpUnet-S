@@ -8,12 +8,17 @@
 
 #import "MainAppDelegate.h"
 #import "MainViewController.h"
+#import "AFNetworking.h"
 
 @implementation MainAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Turn on network indicator
+    [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
+    
     return YES;
 }
 							
