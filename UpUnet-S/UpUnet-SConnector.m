@@ -13,7 +13,8 @@
 static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
 
 - (id)init {
-    self = [super init];
+    NSURL *baseURL = [NSURL URLWithString:[NSString stringWithFormat:BaseURLString]];
+    self = [super initWithBaseURL:baseURL];
     if (self) {
         //
     }
