@@ -9,32 +9,29 @@
 // TODO: Save username + password in keychain
 // TODO: Save auto connect setting in NSUserDefaults
 // TODO: Find out if we have connection to the internet via wifi
+// TODO: Maybe support SLU as well?
 #pragma mark -
 
 #import "MainViewController.h"
-#import "AFHTTPClient.h"
+#import "UpUnet-SConnector.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *disconnectButton;
+@property (strong, nonatomic) UpUnet_SConnector *connectToUpUnetS;
 @end
 
 @implementation MainViewController
 
-static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
+-(UpUnet_SConnector *)connectToUpUnet_S {
+    if (!_connectToUpUnetS) _connectToUpUnetS = [[UpUnet_SConnector alloc] init];
+    return _connectToUpUnetS;
+}
 
 - (IBAction)connectButton:(UIButton *)sender {
-    NSURL *baseURL = [NSURL URLWithString:[NSString stringWithFormat:BaseURLString]];
-    NSDictionary *parameters;
-    
     if (sender == self.connectButton) {
-        parameters = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    @"Login", @"action",
-                                    @"UpUnet-S", @"usergroup",
-                                    @"USERNAME", @"username",
-                                    @"PASSWORD", @"password",
-                                    nil];
+        [self.connectToUpUnetS connect];
     } else if (sender == self.disconnectButton) {
-        parameters = [NSDictionary dictionaryWithObject:@"Logout" forKey:@"action"];
+        [self.connectToUpUnetS disconnect];
     } else {
         NSLog(@"Error!");
         UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -45,23 +42,6 @@ static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
         [av show];
         return;
     }
-    
-    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
-    [client postPath:@"/"
-          parameters:parameters
-             success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//                 NSString* newStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-//                 [self.webView loadHTMLString:newStr baseURL:[NSURL URLWithString:@""]];
-             }
-             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                 UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                              message:[NSString stringWithFormat:@"%@", error]
-                                                             delegate:nil
-                                                    cancelButtonTitle:@"OK"
-                                                    otherButtonTitles:nil];
-                 [av show];
-             }
-     ];
 }
 
 @end

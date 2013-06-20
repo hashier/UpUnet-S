@@ -115,28 +115,28 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                                         </view>
                                         <constraints>
                                             <constraint firstItem="ddp-lG-Lxo" firstAttribute="centerY" secondItem="ApN-23-cz1" secondAttribute="centerY" type="default" id="4Fb-kb-QtE"/>
-                                            <constraint firstItem="cxq-T5-yGV" firstAttribute="top" secondItem="ApN-23-cz1" secondAttribute="top" constant="8" id="aeY-Pf-tsD"/>
-                                            <constraint firstItem="cxq-T5-yGV" firstAttribute="leading" secondItem="ddp-lG-Lxo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qLU-ek-gKT"/>
-                                            <constraint firstItem="ddp-lG-Lxo" firstAttribute="leading" secondItem="ApN-23-cz1" secondAttribute="leading" constant="30" id="qcY-n9-X4F"/>
+                                            <constraint firstItem="cxq-T5-yGV" firstAttribute="centerY" secondItem="ApN-23-cz1" secondAttribute="centerY" type="default" id="906-S6-soC"/>
+                                            <constraint firstItem="ddp-lG-Lxo" firstAttribute="leading" secondItem="ApN-23-cz1" secondAttribute="leading" constant="30" id="X1N-97-SUP"/>
+                                            <constraint firstItem="cxq-T5-yGV" firstAttribute="leading" secondItem="ddp-lG-Lxo" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vGs-Q0-dhW"/>
                                         </constraints>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="2CA-Sa-cTJ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="CDp-r1-AzG">
                                         <rect key="frame" x="0.0" y="91" width="320" height="45"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="10" y="0.0" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zr3-GK-VQf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5eh-P1-B8z">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="100" id="Qzh-Go-so2"/>
+                                                        <constraint firstAttribute="width" constant="100" id="IJO-o3-s4Z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNI-j5-nXz">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po3-gb-xkn">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="152" id="4Pl-7d-yaQ"/>
+                                                        <constraint firstAttribute="width" constant="152" id="hx9-hx-P3k"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -146,10 +146,10 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="vNI-j5-nXz" firstAttribute="leading" secondItem="2CA-Sa-cTJ" secondAttribute="leading" constant="30" id="4ie-kA-abx"/>
-                                            <constraint firstItem="vNI-j5-nXz" firstAttribute="centerY" secondItem="Zr3-GK-VQf" secondAttribute="centerY" type="default" id="baO-oR-Mne"/>
-                                            <constraint firstItem="Zr3-GK-VQf" firstAttribute="leading" secondItem="vNI-j5-nXz" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jlB-Yg-jKv"/>
-                                            <constraint firstItem="Zr3-GK-VQf" firstAttribute="centerY" secondItem="2CA-Sa-cTJ" secondAttribute="centerY" type="default" id="ytQ-bj-IqJ"/>
+                                            <constraint firstItem="po3-gb-xkn" firstAttribute="top" secondItem="CDp-r1-AzG" secondAttribute="top" constant="11" id="AMm-9Z-1BP"/>
+                                            <constraint firstItem="po3-gb-xkn" firstAttribute="leading" secondItem="CDp-r1-AzG" secondAttribute="leading" constant="30" id="dko-mA-bbU"/>
+                                            <constraint firstItem="5eh-P1-B8z" firstAttribute="centerY" secondItem="CDp-r1-AzG" secondAttribute="centerY" type="default" id="jE4-e1-2Mh"/>
+                                            <constraint firstItem="5eh-P1-B8z" firstAttribute="leading" secondItem="po3-gb-xkn" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="qa2-Si-Qt4"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -194,7 +194,7 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-dE-ld5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="948" y="80"/>
+            <point key="canvasLocation" x="899" y="80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWj-1N-S8V">
@@ -215,19 +215,6 @@ If you want to automatically connect to UpUnet-S everytime the application becom
             <point key="canvasLocation" x="-68" y="80"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="connectButton:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="disconnectButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

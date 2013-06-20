@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		003C7C4817579A7700551F46 /* UpUnet-SConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 003C7C4717579A7700551F46 /* UpUnet-SConnector.m */; };
 		006CA69517552D7D0080456A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA68317552D7D0080456A /* AFHTTPClient.m */; };
 		006CA69617552D7D0080456A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA68517552D7D0080456A /* AFHTTPRequestOperation.m */; };
 		006CA69717552D7D0080456A /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA68717552D7D0080456A /* AFImageRequestOperation.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		003C7C4617579A7700551F46 /* UpUnet-SConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UpUnet-SConnector.h"; sourceTree = "<group>"; };
+		003C7C4717579A7700551F46 /* UpUnet-SConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UpUnet-SConnector.m"; sourceTree = "<group>"; };
 		006CA68217552D7D0080456A /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		006CA68317552D7D0080456A /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		006CA68417552D7D0080456A /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -151,6 +154,8 @@
 				00C9ADEC1753E21600C38B39 /* MainAppDelegate.m */,
 				00C9ADF41753E21600C38B39 /* MainStoryboard.storyboard */,
 				00C9ADF71753E21600C38B39 /* MainViewController.h */,
+				003C7C4617579A7700551F46 /* UpUnet-SConnector.h */,
+				003C7C4717579A7700551F46 /* UpUnet-SConnector.m */,
 				00C9ADF81753E21600C38B39 /* MainViewController.m */,
 				00C9ADE31753E21600C38B39 /* Supporting Files */,
 			);
@@ -250,6 +255,7 @@
 				006CA69B17552D7D0080456A /* AFURLConnectionOperation.m in Sources */,
 				006CA69C17552D7D0080456A /* AFXMLRequestOperation.m in Sources */,
 				006CA69D17552D7D0080456A /* UIImageView+AFNetworking.m in Sources */,
+				003C7C4817579A7700551F46 /* UpUnet-SConnector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
