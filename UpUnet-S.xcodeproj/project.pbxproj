@@ -30,6 +30,7 @@
 		00C9ADF31753E21600C38B39 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00C9ADF21753E21600C38B39 /* Default-568h@2x.png */; };
 		00C9ADF61753E21600C38B39 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C9ADF41753E21600C38B39 /* MainStoryboard.storyboard */; };
 		00C9ADF91753E21600C38B39 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C9ADF81753E21600C38B39 /* MainViewController.m */; };
+		00CC1C1F177E127300EDDC2F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CC1C1E177E127300EDDC2F /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		00C9ADF51753E21600C38B39 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		00C9ADF71753E21600C38B39 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		00C9ADF81753E21600C38B39 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		00CC1C1D177E127300EDDC2F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = Reachability/Reachability.h; sourceTree = SOURCE_ROOT; };
+		00CC1C1E177E127300EDDC2F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = Reachability/Reachability.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 		00C9ADE31753E21600C38B39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00CC1C1D177E127300EDDC2F /* Reachability.h */,
+				00CC1C1E177E127300EDDC2F /* Reachability.m */,
 				00C9ADE41753E21600C38B39 /* UpUnet-S-Info.plist */,
 				00C9ADE51753E21600C38B39 /* InfoPlist.strings */,
 				00C9ADE81753E21600C38B39 /* main.m */,
@@ -256,6 +261,7 @@
 				006CA69C17552D7D0080456A /* AFXMLRequestOperation.m in Sources */,
 				006CA69D17552D7D0080456A /* UIImageView+AFNetworking.m in Sources */,
 				003C7C4817579A7700551F46 /* UpUnet-SConnector.m in Sources */,
+				00CC1C1F177E127300EDDC2F /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

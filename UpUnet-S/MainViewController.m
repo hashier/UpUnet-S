@@ -14,6 +14,7 @@
 
 #import "MainViewController.h"
 #import "UpUnet-SConnector.h"
+#import "Reachability.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *disconnectButton;
@@ -43,5 +44,35 @@
         return;
     }
 }
+
+// TODO: try out: reachability-ios
+// because reachability is not working
+// maybe check out:
+// https://github.com/belkevich/reachability-ios
+- (void)whatIsMyStatus {
+    Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    NSLog(@"%@", [reach currentReachabilityFlags]);
+    NSLog(@"%@", [reach currentReachabilityString]);
+    
+    if ([reach isInterventionRequired]) {
+        NSLog(@"User intervention needed");
+    } else {
+        NSLog(@"Connected to the internet");
+    }
+    
+    reach.reachableBlock = ^(Reachability *reach) {
+        NSLog(@"REACHABLE!");
+    };
+    
+    reach.unreachableBlock = ^(Reachability *reach) {
+        NSLog(@"NOT REACHABLE!");
+    };
+}
+
+//- (void)viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    [self whatIsMyStatus];
+//}
 
 @end
