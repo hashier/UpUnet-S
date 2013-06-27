@@ -22,7 +22,7 @@
 
 @implementation MainViewController
 
--(UpUnet_SConnector *)connectToUpUnetS {
+- (UpUnet_SConnector *)connectToUpUnetS {
     if (!_connectToUpUnetS) _connectToUpUnetS = [[UpUnet_SConnector alloc] init];
     return _connectToUpUnetS;
 }
