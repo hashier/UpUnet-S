@@ -18,6 +18,10 @@ static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
     if (self) {
         //
     }
+    // FIXME: Testing
+    [self setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        NSLog(@"I'm a block (: and status is: %d", status);
+    }];
     return self;
 }
 
