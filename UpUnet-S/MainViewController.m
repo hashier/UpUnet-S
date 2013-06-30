@@ -7,9 +7,9 @@
 //
 
 // TODO: Save username + password in keychain
-// TODO: Save auto connect setting in NSUserDefaults
 // TODO: Find out if we have connection to the internet via wifi
 // TODO: Maybe support SLU as well?
+
 #pragma mark -
 
 #import "MainViewController.h"

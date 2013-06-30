@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WxD-yc-NHf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="WxD-yc-NHf">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -77,10 +77,10 @@ If you want to automatically connect to UpUnet-S everytime the application becom
             </objects>
             <point key="canvasLocation" x="458" y="80"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="BNL-PJ-nRo">
             <objects>
-                <tableViewController id="Uo3-z1-2JC" sceneMemberID="viewController">
+                <tableViewController id="Uo3-z1-2JC" customClass="SettingsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="jog-pL-E96">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,7 +163,11 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                                             <rect key="frame" x="10" y="1" width="300" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jss-Qp-LKw"/>
+                                                <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jss-Qp-LKw">
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="Uo3-z1-2JC" eventType="valueChanged" id="Y7C-AZ-tyR"/>
+                                                    </connections>
+                                                </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Autoconnect" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vi-eO-twd">
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="175" id="hfM-tj-JsX"/>
@@ -191,6 +195,9 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="HFB-Ta-Ewy"/>
+                    <connections>
+                        <outlet property="autoconnect" destination="jss-Qp-LKw" id="9Nu-AW-Q86"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-dE-ld5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

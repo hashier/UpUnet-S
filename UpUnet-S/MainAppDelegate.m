@@ -34,14 +34,17 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
+#define UPUNETS_AUTOCONNECT @"UpUnet-S_Autoconnect"
+
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 
-    // TODO: Check settings
-    // Press the "connect" button
-//    MainViewController *mainController = (MainViewController*) self.window.rootViewController;
-//    [mainController.connectButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    // TODO: activate the auto-press functionality after keyring is implemented
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:UPUNETS_AUTOCONNECT]) {
+        //    MainViewController *mainController = (MainViewController*) self.window.rootViewController;
+        //    [mainController.connectButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

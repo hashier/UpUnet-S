@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00025E691780864E0062E490 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00025E681780864E0062E490 /* SettingsViewController.m */; };
 		003C7C4817579A7700551F46 /* UpUnet-SConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 003C7C4717579A7700551F46 /* UpUnet-SConnector.m */; };
 		006CA69517552D7D0080456A /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA68317552D7D0080456A /* AFHTTPClient.m */; };
 		006CA69617552D7D0080456A /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA68517552D7D0080456A /* AFHTTPRequestOperation.m */; };
@@ -34,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00025E671780864E0062E490 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		00025E681780864E0062E490 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		003C7C4617579A7700551F46 /* UpUnet-SConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UpUnet-SConnector.h"; sourceTree = "<group>"; };
 		003C7C4717579A7700551F46 /* UpUnet-SConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UpUnet-SConnector.m"; sourceTree = "<group>"; };
 		006CA68217552D7D0080456A /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				00C9ADEB1753E21600C38B39 /* MainAppDelegate.h */,
 				00C9ADEC1753E21600C38B39 /* MainAppDelegate.m */,
 				00C9ADF41753E21600C38B39 /* MainStoryboard.storyboard */,
+				00025E671780864E0062E490 /* SettingsViewController.h */,
+				00025E681780864E0062E490 /* SettingsViewController.m */,
 				00C9ADF71753E21600C38B39 /* MainViewController.h */,
 				003C7C4617579A7700551F46 /* UpUnet-SConnector.h */,
 				003C7C4717579A7700551F46 /* UpUnet-SConnector.m */,
@@ -262,6 +267,7 @@
 				006CA69D17552D7D0080456A /* UIImageView+AFNetworking.m in Sources */,
 				003C7C4817579A7700551F46 /* UpUnet-SConnector.m in Sources */,
 				00CC1C1F177E127300EDDC2F /* Reachability.m in Sources */,
+				00025E691780864E0062E490 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
