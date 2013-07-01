@@ -10,6 +10,8 @@
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *autoconnect;
+@property (weak, nonatomic) IBOutlet UITextField *userText;
+@property (weak, nonatomic) IBOutlet UITextField *passText;
 @end
 
 @implementation SettingsViewController
@@ -45,8 +47,18 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    self.userText.returnKeyType = UIReturnKeyDone;
+    self.userText.delegate = self;
+    self.passText.returnKeyType = UIReturnKeyDone;
+    self.passText.delegate = self;
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [self.autoconnect setOn:[defaults boolForKey:UPUNETS_AUTOCONNECT]];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 #pragma mark - Table view data source

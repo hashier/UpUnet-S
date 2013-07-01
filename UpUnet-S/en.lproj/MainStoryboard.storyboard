@@ -197,6 +197,8 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                     <navigationItem key="navigationItem" id="HFB-Ta-Ewy"/>
                     <connections>
                         <outlet property="autoconnect" destination="jss-Qp-LKw" id="9Nu-AW-Q86"/>
+                        <outlet property="passText" destination="5eh-P1-B8z" id="43x-5e-zLM"/>
+                        <outlet property="userText" destination="cxq-T5-yGV" id="yZN-ZG-eCb"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xlt-dE-ld5" userLabel="First Responder" sceneMemberID="firstResponder"/>
