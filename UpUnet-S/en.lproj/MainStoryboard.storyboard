@@ -101,6 +101,9 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="editingDidEnd:" destination="Uo3-z1-2JC" eventType="editingDidEnd" id="RFb-mP-nb1"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddp-lG-Lxo">
                                                     <constraints>
@@ -132,7 +135,10 @@ If you want to automatically connect to UpUnet-S everytime the application becom
                                                         <constraint firstAttribute="width" constant="100" id="IJO-o3-s4Z"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                    <connections>
+                                                        <action selector="editingDidEnd:" destination="Uo3-z1-2JC" eventType="editingDidEnd" id="8c6-s8-qfu"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Password" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="po3-gb-xkn">
                                                     <constraints>
@@ -224,6 +230,29 @@ If you want to automatically connect to UpUnet-S everytime the application becom
             <point key="canvasLocation" x="-68" y="80"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="MainViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="connectButton:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="connectButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="disconnectButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="SettingsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="editingDidEnd:" candidateClass="UITextField"/>
+                <relationship kind="action" name="switchChanged:" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="autoconnect" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="passText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="userText" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

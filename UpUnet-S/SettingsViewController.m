@@ -7,6 +7,8 @@
 //
 
 #import "SettingsViewController.h"
+#import "SSKeychain.h"
+#import "Constants.h"
 
 @interface SettingsViewController ()
 @property (weak, nonatomic) IBOutlet UISwitch *autoconnect;
@@ -42,18 +44,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-#define UPUNETS_AUTOCONNECT @"UpUnet-S_Autoconnect"
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    // set up textFields
     self.userText.returnKeyType = UIReturnKeyDone;
     self.userText.delegate = self;
+    [self.userText setText:[SSKeychain passwordForService:SERVICE account:USER]];
     self.passText.returnKeyType = UIReturnKeyDone;
     self.passText.delegate = self;
+    [self.passText setText:[SSKeychain passwordForService:SERVICE account:PASSWORD]];
     
+    // set up switch
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [self.autoconnect setOn:[defaults boolForKey:UPUNETS_AUTOCONNECT]];
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -61,10 +66,10 @@
     return YES;
 }
 
+/*
+ * commented since we are static and therefore don't have a data source
 #pragma mark - Table view data source
 
-/*
-// commented since we are static
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 #warning Potentially incomplete method implementation.
@@ -133,6 +138,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"wow");
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -142,12 +148,20 @@
      */
 }
 
-# pragma mark - Switch
+# pragma mark - Save settings
 
 - (IBAction)switchChanged:(UISwitch *)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setBool:self.autoconnect.on forKey:UPUNETS_AUTOCONNECT];
     [defaults synchronize];
+}
+
+- (IBAction)editingDidEnd:(UITextField *)sender {
+    if (sender == self.userText) {
+        [SSKeychain setPassword:sender.text forService:SERVICE account:USER];
+    } else if (sender == self.passText) {
+        [SSKeychain setPassword:sender.text forService:SERVICE account:PASSWORD];
+    }
 }
 
 @end

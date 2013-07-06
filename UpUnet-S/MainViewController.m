@@ -14,6 +14,8 @@
 
 #import "MainViewController.h"
 #import "UpUnet-SConnector.h"
+#import "SSKeychain.h"
+#import "Constants.h"
 
 @interface MainViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *disconnectButton;
@@ -27,19 +29,44 @@
     return _connectToUpUnetS;
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(becomeActive:)
+                                                 name:UIApplicationDidBecomeActiveNotification
+                                               object:nil];
+}
+
+- (void)becomeActive:(NSNotification *)notification {
+    // autoconnect yes/no?
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:UPUNETS_AUTOCONNECT]) {
+        // press button connect
+        [self.connectButton sendActionsForControlEvents:UIControlEventTouchUpInside];
+    }
+}
+
+- (void)showMsg:(NSString *)msg withTitle:(NSString *)title {
+    NSLog(@"%@:%@", title, msg);
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:title
+                                                 message:msg
+                                                delegate:nil
+                                       cancelButtonTitle:@"Ok"
+                                       otherButtonTitles:nil];
+    [av show];
+}
+
 - (IBAction)connectButton:(UIButton *)sender {
+    BOOL userAndPasswordNonEmpty = (([SSKeychain passwordForService:SERVICE account:USER] > 0) && ([SSKeychain passwordForService:SERVICE account:PASSWORD] > 0));
+    if (!userAndPasswordNonEmpty) {
+        [self showMsg:@"You need to fill out username and password in the settings tab" withTitle:@"Warning!"];
+    }
+
     if (sender == self.connectButton) {
         [self.connectToUpUnetS connect];
     } else if (sender == self.disconnectButton) {
         [self.connectToUpUnetS disconnect];
     } else {
-        NSLog(@"Error!");
-        UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                     message:@"Can't decide which button"
-                                                    delegate:nil
-                                           cancelButtonTitle:@"Ok"
-                                           otherButtonTitles:nil];
-        [av show];
+        [self showMsg:@"Can't decide which button" withTitle:@"Error!"];
         return;
     }
 }
