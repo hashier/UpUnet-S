@@ -7,6 +7,8 @@
 //
 
 #import "UpUnet-SConnector.h"
+#import "SSKeychain.h"
+#import "Constants.h"
 
 @implementation UpUnet_SConnector
 
@@ -50,8 +52,8 @@ static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
     parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                   @"Login", @"action",
                   @"UpUnet-S", @"usergroup",
-                  @"USERNAME", @"username",
-                  @"PASSWORD", @"password",
+                  [SSKeychain passwordForService:SERVICE account:USER], @"username",
+                  [SSKeychain passwordForService:SERVICE account:PASSWORD], @"password",
                   nil];
     [self doNetwork:parameters];
 }
