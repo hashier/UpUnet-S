@@ -6,10 +6,6 @@
 //  Copyright (c) 2013 Christopher Loessl. All rights reserved.
 //
 
-// TODO: Save username + password in keychain
-// TODO: Find out if we have connection to the internet via wifi
-// TODO: Maybe support SLU as well?
-
 #pragma mark -
 
 #import "MainViewController.h"
