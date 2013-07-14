@@ -7,7 +7,7 @@ Auto connect to UpUnet-S which is used by Uppsala University
 ToDo and ideas
 --------------
 
-See issuees tracker
+See issues tracker
 
 
 License
