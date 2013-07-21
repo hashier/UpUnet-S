@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6977264D-1726-4DAD-AAA3-FE6C8C7E7171</string>
+	<key>IDESourceControlProjectName</key>
+	<string>UpUnet-S</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4252317E-29A5-4B27-A588-927FD606AB89</key>
+		<string>https://github.com/soffes/sskeychain.git</string>
+		<key>59EE387D-A5B1-43F5-9371-B28F0FFA8F1F</key>
+		<string>git://github.com/AFNetworking/AFNetworking.git</string>
+		<key>FA70A519-7A3F-4AE9-839C-F66D55AE6BA8</key>
+		<string>ssh://github.com/hashier/UpUnet-S.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>UpUnet-S.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4252317E-29A5-4B27-A588-927FD606AB89</key>
+		<string>../../sskeychain</string>
+		<key>59EE387D-A5B1-43F5-9371-B28F0FFA8F1F</key>
+		<string>../../AFNetworking</string>
+		<key>FA70A519-7A3F-4AE9-839C-F66D55AE6BA8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/hashier/UpUnet-S.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FA70A519-7A3F-4AE9-839C-F66D55AE6BA8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59EE387D-A5B1-43F5-9371-B28F0FFA8F1F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AFNetworking</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FA70A519-7A3F-4AE9-839C-F66D55AE6BA8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>UpUnet-S</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4252317E-29A5-4B27-A588-927FD606AB89</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sskeychain</string>
+		</dict>
+	</array>
+</dict>
+</plist>
