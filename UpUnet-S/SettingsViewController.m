@@ -36,16 +36,6 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     // set up textFields
     self.userText.returnKeyType = UIReturnKeyDone;
@@ -58,7 +48,12 @@
     // set up switch
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [self.autoconnect setOn:[defaults boolForKey:UPUNETS_AUTOCONNECT]];
-    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
@@ -138,7 +133,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"wow");
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
