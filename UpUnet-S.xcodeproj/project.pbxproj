@@ -21,6 +21,8 @@
 		006CA69D17552D7D0080456A /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 006CA69417552D7D0080456A /* UIImageView+AFNetworking.m */; };
 		006CA69F175602B80080456A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006CA69E175602B80080456A /* SystemConfiguration.framework */; };
 		006CA6A11756033D0080456A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006CA6A01756033D0080456A /* MobileCoreServices.framework */; };
+		00AC432617C53511002D0477 /* upunets114.png in Resources */ = {isa = PBXBuildFile; fileRef = 00AC432517C53511002D0477 /* upunets114.png */; };
+		00AC432817C5351B002D0477 /* upunets57.png in Resources */ = {isa = PBXBuildFile; fileRef = 00AC432717C5351B002D0477 /* upunets57.png */; };
 		00B145C81788343000D29053 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B145C51788343000D29053 /* SSKeychain.m */; };
 		00B145C91788343000D29053 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B145C71788343000D29053 /* SSKeychainQuery.m */; };
 		00C9ADDD1753E21600C38B39 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C9ADDC1753E21600C38B39 /* UIKit.framework */; };
@@ -64,6 +66,8 @@
 		006CA69417552D7D0080456A /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		006CA69E175602B80080456A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		006CA6A01756033D0080456A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		00AC432517C53511002D0477 /* upunets114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upunets114.png; sourceTree = "<group>"; };
+		00AC432717C5351B002D0477 /* upunets57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = upunets57.png; sourceTree = "<group>"; };
 		00B145C41788343000D29053 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
 		00B145C51788343000D29053 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		00B145C61788343000D29053 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
@@ -128,6 +132,16 @@
 			);
 			name = AFNetworking;
 			path = AFNetworking/AFNetworking;
+			sourceTree = "<group>";
+		};
+		00AC432917C53583002D0477 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				00AC432717C5351B002D0477 /* upunets57.png */,
+				00AC432517C53511002D0477 /* upunets114.png */,
+			);
+			name = Images;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		00B145C31788343000D29053 /* SSKeychain */ = {
@@ -195,6 +209,7 @@
 		00C9ADE31753E21600C38B39 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				00AC432917C53583002D0477 /* Images */,
 				00C9ADE41753E21600C38B39 /* UpUnet-S-Info.plist */,
 				00C9ADE51753E21600C38B39 /* InfoPlist.strings */,
 				00C9ADE81753E21600C38B39 /* main.m */,
@@ -264,6 +279,8 @@
 				00C9ADF11753E21600C38B39 /* Default@2x.png in Resources */,
 				00C9ADF31753E21600C38B39 /* Default-568h@2x.png in Resources */,
 				00C9ADF61753E21600C38B39 /* MainStoryboard.storyboard in Resources */,
+				00AC432617C53511002D0477 /* upunets114.png in Resources */,
+				00AC432817C5351B002D0477 /* upunets57.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
