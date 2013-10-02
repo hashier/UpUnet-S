@@ -73,6 +73,8 @@ build/
 *~
 profile
 .idea/
-*.lock
+#*.lock
 *.pyc
 *.swp
+
+Pods
