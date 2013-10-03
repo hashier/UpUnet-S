@@ -8,12 +8,15 @@
 
 #import "MainAppDelegate.h"
 #import "AFNetworking.h"
+#import "TestFlight.h"
+#import "config.h"
 
 @implementation MainAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [TestFlight takeOff:kTestFlighAppAPIKey];
     
     // Turn on network indicator
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
