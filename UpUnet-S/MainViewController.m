@@ -51,12 +51,8 @@
     [av show];
 }
 
-- (IBAction)connectButton:(UIButton *)sender {
-    BOOL userAndPasswordNonEmpty = (([SSKeychain passwordForService:SERVICE account:USER] > 0) && ([SSKeychain passwordForService:SERVICE account:PASSWORD] > 0));
-    if (!userAndPasswordNonEmpty) {
-        [self showMsg:@"You need to fill out username and password in the settings tab" withTitle:@"Warning!"];
-    }
-
+- (IBAction)connectButton:(UIButton *)sender
+{
     if (sender == self.connectButton) {
         [self.connectToUpUnetS connect];
     } else if (sender == self.disconnectButton) {

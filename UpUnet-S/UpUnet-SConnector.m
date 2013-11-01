@@ -47,7 +47,23 @@ static NSString *const BaseURLString = @"https://netlogon.student.uu.se/";
      ];
 }
 
-- (void)connect {
+- (void)showMsg:(NSString *)msg withTitle:(NSString *)title {
+    NSLog(@"%@:%@", title, msg);
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:title
+                                                 message:msg
+                                                delegate:nil
+                                       cancelButtonTitle:@"Ok"
+                                       otherButtonTitles:nil];
+    [av show];
+}
+
+- (void)connect
+{
+    BOOL userAndPasswordNonEmpty = (([SSKeychain passwordForService:SERVICE account:USER] > 0) && ([SSKeychain passwordForService:SERVICE account:PASSWORD] > 0));
+    if (!userAndPasswordNonEmpty) {
+        [self showMsg:@"You need to fill out username and password in the settings tab" withTitle:@"Warning!"];
+    }
+    
     NSDictionary *parameters;
     parameters = [NSDictionary dictionaryWithObjectsAndKeys:
                   @"Login", @"action",
