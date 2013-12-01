@@ -1,6 +1,6 @@
 //
 //  config.h
-//  Rabattify
+//  UpUnet-S
 //
 //  Created by Christopher Loessl
 //  Copyright (c) 2013 Christopher Loessl. All rights reserved.
